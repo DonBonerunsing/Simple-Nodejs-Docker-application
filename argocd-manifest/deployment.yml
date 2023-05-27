@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: nodejs-container
-        image: danny/nodejs:29
+        image: danny1dockerhub/mynodesapp:29
         ports:
         - containerPort: 3000
 
