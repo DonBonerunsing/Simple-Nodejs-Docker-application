@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script{
                     //https://<AwsAccountNumber>.dkr.ecr.<region>.amazonaws.com/rekeyole-app', 'ecr:<region>:<credentialsId>
-                    docker.withRegistry('https://801011517441.us-east-2.compute.amazonaws.com/nodejsapp', 'ecr:us-east-2:danny-ECR') {
+                    docker.withRegistry('https://801011517441.us-east-2.compute.amazonaws.com/nodejsapp', 'ecr:us-east-2:dandevops-ecr') {
                     // build image
                     def myImage = docker.build("801011517441.us-east-2.compute.amazonaws.com/nodejsapp:latest")
                     // push image
