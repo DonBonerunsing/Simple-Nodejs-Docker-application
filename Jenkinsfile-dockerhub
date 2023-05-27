@@ -29,13 +29,7 @@ pipeline {
             steps{
                 sh 'docker push $APP_NAME:$BUILD_NUMBER'
             }
-        }
-        stage('Trigger ManifestUpdate') {
-             steps{
-                build job: 'argocd-manifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]     
-
-            } 
-        }      
+        }     
     }
 }
 
